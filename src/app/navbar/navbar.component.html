@@ -1,0 +1,24 @@
+<div class="hero">
+
+    <div class="card">
+        
+
+            <input type="text" class="search" id="search-input" [(ngModel)]='cityname'>
+    
+            <button (click)="searchCity()" class="search-btn">Search</button>
+        
+    
+    <div class="search-content">
+        <h1> Weather Report </h1>
+        <p  id="city"> {{cityname }} </p>
+        <div *ngIf="tempartureData ">
+            <div>
+                <h2 id="weather_type">{{tempartureData.weather[0].main}}</h2>
+            </div>
+            <h3 > Temp <span id="Temp"></span> <span>{{tempartureData.main.temp}}°F</span></h3>
+            <h3 > min-temp:<span id="min-temp"></span> <span>{{tempartureData.main.temp_min}}°F</span></h3>
+            <h3>max-temp :<span id="max-temp"></span> <span>{{tempartureData.main.temp_max}}°F</span></h3>
+        </div>
+    </div>
+    </div>
+</div>
